@@ -1,0 +1,45 @@
+<div style = "font-size: 16pt; width: 500px; background-color:#005710; color: white; padding: 10px;">
+	Your Estimate
+</div>
+<table cellspacing = "0" cellpadding = "10" style = "width: 520px; font-size: 12pt;">
+<tr>
+	<th colspan = 2 style = "background-color: #E8E8E8;">Estimate For </th>
+</tr>
+<tr>
+	<td><%= @current_estimate.name %></td>
+	<td>
+		<%= @current_estimate.address %> <br />
+		<%= @current_estimate.city %> 
+	</td>
+</tr>
+<tr>
+	<th colspan = 2 style = "background-color: #E8E8E8;">Tree Details</th>
+</tr>
+
+<% @index = 1 %>
+<% @estimate_work.each do |work| %>
+	<% info_array = work.info.split("|") %>
+	<tr>
+		<td style = "vertical-align: text-top;"><%= "Tree #" + @index.to_s %></td>
+		<td>
+			<div style = "width: 100%; text-align: center;">Work Included</div> <br />
+			- <%= parse_work_action(work.work_type, info_array) %></span> <br />
+			<% if info_array[0].casecmp("Yes") == 0 %> - Stump Removal <br /><% end %>
+			<% if info_array[3].casecmp("No") == 0 %> - Wood Removal <br /><% end %>
+			<br />
+			<div style = "width: 100%; text-align: center;">Discounts Applied For</div> <br />
+			<% discount = "False" %>
+			<% if info_array[1].casecmp("No") == 0 %><% discount = "True" %> - Vehicle Access to Tree <br /><% end %>
+			<% if info_array[2].casecmp("No") == 0 %><% discount = "True" %> - No Breakables <br /><% end %>
+			<% if discount == "False" %>N/A<% end %>
+		</td>
+	</tr>
+	<% @index = @index + 1 %>
+<% end %>
+<tr>
+	<td style="font-size: 14pt; background-color: #E8E8E8; border-width: 3px 0 0 0; border-style: solid; border-color: black;">Total Cost</td>
+	<td style="font-size: 14pt; background-color: #E8E8E8; border-width: 3px 0 0 0; border-style: solid; border-color: black;">$<%= @current_estimate.total_cost %></td>
+</tr>
+</table>
+
+<p>Thank you for your interest in the Big Tree team. If you require any more information, please call 1-877-542-5551.</p>

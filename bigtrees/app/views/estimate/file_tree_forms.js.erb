@@ -1,0 +1,10 @@
+
+
+$('#form-container').fadeOut(500, function(){
+	<% if @current_work.work_type == "Removal" %>
+		$('#form-container').html("<%= escape_javascript(render(:partial => 'estimate/remove_form')) %>").hide();
+	<% else %>
+		$('#form-container').html("<%= escape_javascript(render(:partial => 'estimate/trim_form')) %>").hide();
+	<% end %>
+	$('#form-container').fadeIn(500);
+});

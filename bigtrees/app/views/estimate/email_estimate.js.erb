@@ -1,0 +1,4 @@
+$('#email-estimate-content').fadeOut(500, function(){
+		$('#email-estimate-content').html("<%= escape_javascript(render(:partial => 'estimate/email_complete_display')) %>").hide();
+	$('#email-estimate-content').fadeIn(500);
+});

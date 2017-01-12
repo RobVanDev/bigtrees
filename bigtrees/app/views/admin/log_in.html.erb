@@ -1,0 +1,21 @@
+<div id = "log-in-form">
+	<%= form_tag url_for(controller: 'admin', action: 'log_in'), method: 'post' do %>
+		<h3>Please Sign In </h3>
+		<table id = "log-in-table">
+			<tr>
+				<td><b>Username:</b></td>
+				<td><%= text_field_tag 'username' %></td>
+			</tr>
+			<tr>
+				<td><b>Password:</b></td>
+				<td><%= password_field_tag 'password' %></td>
+			</tr>
+			<tr>
+				<td colspan = 2>
+					<%= submit_tag 'Log In' %>
+				</td>
+			</tr>
+			
+		</table>
+	<% end %>
+</div>

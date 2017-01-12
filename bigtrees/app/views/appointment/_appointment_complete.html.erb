@@ -1,0 +1,14 @@
+<div id = "book-appointment-container">
+<%= form_tag url_for(:controller => 'appointment', :action => 'submit_new_appointment'), :method => 'put' do %>
+<%= hidden_field_tag "appointment_id", @appt_id %>
+<%= hidden_field_tag "num_trees", @num_trees %>
+<div id = "appointment-header" class = "green-header">
+	Book an Appointment
+</div>
+	<div id = "image-upload-content">
+		<div id = "image-text">
+			<p>Complete</p>
+		</div>
+	</div>
+<% end %>
+</div>

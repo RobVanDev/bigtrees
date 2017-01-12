@@ -1,0 +1,170 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#admin-panel{
+}
+
+#admin-left-side{
+	padding: 20px 20px;
+	width: 100%;
+	display: block;
+}
+
+#admin-estimate-table{
+	width: 100%;
+}
+
+
+#admin-table-container{
+	height: 400px;
+	overflow: auto;
+	border-width: 1px;
+	border-color: gray;
+	border-style: solid;
+}
+
+#admin-appointment-table td, #admin-estimate-table td{
+	padding: 10px 10px;
+	border-width: 0 0 1px 0;
+	border-color: gray;
+	border-style: solid;
+}
+
+#single-appointment{
+	margin: 20px 40px;
+}
+
+#single-appointment-table td{
+	padding: 5px 15px;
+	border-style: solid;
+	border-color: gray;
+	border-width: 2px;
+}
+
+#appointment-tree-images{
+	width: 90%;
+}
+
+#appointment-tree-images td{
+	padding: 10px;
+}
+
+.image_left{
+	text-align: right;
+	width: 20%;
+}
+
+.image_right{
+	width: 75%;
+}
+
+.tree-image{
+	width: 250px;
+}
+
+.info-table td, .info-table th{
+	padding: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray;
+}
+
+#admin-estimate-display{
+	padding: 20px;
+}
+
+#excel-download{
+	width: 100%;
+	border-style: solid;
+	border-color: grey;
+	border-width: 4px;
+	
+	padding: 10px;
+	font-size: 16pt;
+	
+	margin: 10px 0 0 0;
+}
+
+#work-required-table td{
+	padding: 10px;
+}
+
+#work-required-table th{
+	padding: 10px;
+}
+
+#stats-display{
+	padding: 20px;
+}
+
+#stats-table{
+	width: 100%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+}
+
+#stats-table td th{
+	padding: 10px 20px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+#stats-table td{
+	padding: 10px 20px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	
+	text-align: center;
+}
+
+#stats-table th{
+	padding: 10px 20px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	
+	text-align: center;
+}
+
+#all-display{
+	width: 100%;
+	padding: 20px;
+}
+
+#all-display-table td{
+	padding: 10px 10px;
+	border-width: 0 0 1px 0;
+	border-color: gray;
+	border-style: solid;
+}
+
+#all-display-table{
+	width: 100%;
+}
+
+#all-display-container{
+	height: 300px;
+	overflow: auto;
+	border-width: 1px;
+	border-color: gray;
+	border-style: solid;
+}
+#log-in-form{
+	width: 30%;
+	margin: 100px auto 0 auto;
+	text-align: center;
+}
+#log-in-table td{
+	padding: 5px 10px;
+}
+
+.status-button{
+	float: left;
+	margin: 5px;
+}
+
+

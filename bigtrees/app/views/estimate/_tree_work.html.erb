@@ -1,0 +1,20 @@
+
+
+<% if is_number(@num_trees) %>
+	<td class = "no-border">Work Needed</td>
+	<td class = "no-border">
+	<div id = "tree-list">
+		<table class = "form-table tree-form">
+			<% for i in 1..@num_trees.to_i %>
+				<tr>
+				<% select_id_tag = "tree_work_#{i}" %>
+				<td class = "no-border">Tree #<%= i %></td>
+				<td class = "no-border" style = "width: 160px;"><%=select_tag select_id_tag, options_for_select(["Removal", "Trim", "Broken Limbs"], "Removal") %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</td>
+<% else %>
+	<p>TEMP</p>
+<% end %>

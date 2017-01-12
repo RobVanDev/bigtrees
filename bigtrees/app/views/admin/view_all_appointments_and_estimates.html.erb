@@ -1,0 +1,25 @@
+<div id = "all-display">
+	<h2>Estimates</h2>
+	<div id = "all-display-container">
+		<table id = "all-display-table">
+				<tr>
+					<td><b>Id</b></td>
+					<td><b>Name</b></td>
+					<td><b>Quantity</b></td>
+					<td><b>Contact</b></td>
+					<td></td>
+				</tr>
+				<tr>
+				<% @estimates.each do |est| %>
+				<tr>
+					<td><%= est.id %></td>
+					<td><%= est.name %></td>
+					<td><%= est.tree_quantity %></td>
+					<td><%= est.contact_method %></td>
+					<td><%= link_to "View", controller: 'admin', action: 'view_estimate_by_id', estimate_id: est.id %></td>
+				</tr>
+			<% end %>
+				</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ln -sf ~/logs/user/nginx_error_bigtrees.log ~/webapps/bigtrees/nginx/logs/error.log
+
+PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/occamsrazor/bin RUBYLIB=/home/occamsrazor/webapps/bigtrees/lib:$RUBYLIB TMPDIR=/home/occamsrazor/webapps/bigtrees/tmp PASSENGER_TMPDIR=/home/occamsrazor/webapps/bigtrees/tmp GEM_HOME=/home/occamsrazor/webapps/bigtrees/gems /home/occamsrazor/webapps/bigtrees/nginx/sbin/nginx -p /home/occamsrazor/webapps/bigtrees/nginx/

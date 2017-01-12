@@ -1,0 +1,65 @@
+<script>
+	$(document).ready(function(){
+		$('#tree-value').on('change', function(){
+			if(this.value == "4+"){
+				$('#appt-form').attr("data-remote", false);
+			}
+			else{
+				$('#appt-form').attr("data-remote", true);
+			}
+		});
+	});
+</script>
+
+<div id = "appointment-container">
+<div id = "book-appointment-container">
+<%= form_tag url_for(:controller => 'appointment', :action => 'submit_new_appointment'), :method => 'put', remote: true, id: 'appt-form' do %>
+<%= hidden_field_tag 'submitted_action', @current_action %>
+<%= hidden_field_tag 'estimate_id', @estimate_id %>
+<div id = "estimate-header" class = "green-header">
+	Book an Appointment
+</div>
+	<table id = "appointment-table">
+		<tr>
+			<td>Name: </td>
+			<td><%= text_field_tag "name", @name , :class => "appointment-field", :required => true %></td>
+		</tr>
+		<tr>
+			<td style ="vertical-align: top;">Address of Trees:</td>
+			<td><%= text_field_tag 'address_line_1', @address_line_1, :placeholder => "Street Address", :class => "appointment-field", :required => true %> <br />
+				<%= text_field_tag 'city', @city, :placeholder => "City", :class => "appointment-field", :required => true %><br />
+			</td>
+		</tr>
+		<tr>
+			<td>Preferred Contact Method: </td>
+			<td><%= select_tag "contact_method", options_for_select(['Phone', 'Email', 'Text']) %></td>
+		</tr>
+		<tr>
+			<td><div id = "contact-entry-name">Phone Number:</div></td>
+			<td><div id = "contact-entry-field"><%= text_field_tag 'phone_number', '', :class => 'appointment-field', :required => true %></div></td>
+			
+		</tr>
+		<tr>
+			<td>Number of Trees:</td>
+			<td><%= select_tag 'num_trees', options_for_select(["1", "2", "3", "4+"], @num_trees), :id => 'tree-value', :class => 'appointment-field' %></td>
+		</tr>
+	</table>
+	<div id = "appointment-submit">
+		<%= submit_tag "Next", :id => 'submit-element' %>
+	</div>
+<% end %>
+</div>
+
+	<div id = "right-sidebar">
+			<div id = "appointment-description" style = "font-size: 12pt">
+				<h3>Book Your Appointment with Our Team</h3>
+				Provide us with your contact information and one of our arborists will be in touch to discuss your job in detail.<br /><br /> 
+				From there, we can form a plan, get you a final quote, and then if everything looks good, book a time to complete your job. <br /><br />
+				If you would like an idea of how much your job will cost before we contact you, feel free to get a <%= link_to "Free Estimate", :controller => 'estimate', :action => 'new' %> using our online tool.
+			</div>
+	</div>
+</div>
+
+<div id = "appointment-disclaimer">
+	All Data is Confidential and will NOT be shared. <br /> <br />
+</div>

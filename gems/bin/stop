@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pid_file=/home/occamsrazor/webapps/bigtrees/nginx/logs/nginx.pid
+
+if [ -f $pid_file ]
+then
+    kill $( cat $pid_file )
+fi
+sleep 3
+rm -rf /home/occamsrazor/webapps/bigtrees/tmp/*

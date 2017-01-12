@@ -1,0 +1,82 @@
+<div id = "admin-estimate-display">
+<%= link_to "Back to Admin Panel", controller: 'admin', action: 'admin_panel' %>
+<h2>Estimate Number <%= @estimate.id %></h2>
+<h3> Status: - <%= @estimate.response %>  Last Change: <%= @estimate.last_change %> </h3>
+<table>
+<tr>
+<td><b>Change Status: </b></td> 
+<td><%= button_to "Responded", controller: 'admin', action: 'change_response', estimate_id: @estimate.id, response_type: 'RESPONDED', class: 'status-button'  %></td>
+<td><%= button_to "Complete", controller: 'admin', action: 'change_response', estimate_id: @estimate.id, response_type: 'COMPLETE' %></td>
+</tr>
+</table>
+<h3>Personal Info</h3>
+<table class = 'info-table'>
+	<tr>
+		<th>Name</th>
+		<th>Street Address</th>
+		<th>City</th>
+		<th>Number of Trees</th>
+		<th>Contact Method</th>
+		<th>Contact Info</th>
+	</tr>
+	<tr>
+		<td><%= @estimate.name %></td>
+		<td><%= @estimate.address %></td>
+		<td><%= @estimate.city %></td>
+		<td><%= @estimate.tree_quantity %></td>
+		<td><%= @estimate.contact_type %></td>
+		<td><%= @estimate.contact_method %></td>
+	</tr>
+</table>
+<br />
+<h3>Work Required</h3>
+<table class = 'info-table'>
+	<tr>
+		<th>Tree Number</th>
+		<th>Work</th>
+	</tr>
+	<% @estimate_work.each do |est| %>
+		<tr>
+			<td><%= est.tree_index %></td>
+			<td><%= est.work_type %></td>
+		</tr>
+	<% end %>
+</table>
+
+<h4>Tree Info</h4>
+<table class = 'info-table'>
+	<tr>
+		<th>Stump Removal</th>
+		<th>Vehicle Access</th>
+		<th>Breakables</th>
+		<th>Wood Removal</th>
+	</tr>
+	<tr>
+		<td><%= @estimate.stump_removal %></td>
+		<td><%= @estimate.vehicle_access %></td>
+		<td><%= @estimate.breakables %></td>
+		<td><%= @estimate.wood_removal %></td>
+	</tr>
+</table>
+
+</div>
+
+	<div id = "appointment-tree-images">
+		<% if @images_attached == false %>
+			<b>No Images Included</b>
+		<% else %>
+		<table id = "appointment-tree-table">
+			<% i = 0 %>
+			<% @tree_image_array.each do |image_array| %>
+			<% i = i + 1 %>
+			<tr><td><h4>Tree #<%= i %></h4></td></tr>
+			<tr>
+				<% image_array.each do |img| %>
+					<% img_path = "/TreeImages/" + img %>
+					<td class = "image_right"><%= link_to img_path do %><%= image_tag(img_path, :alt => "Image", :class => 'tree-image') %><% end %> </td>
+				<% end %>
+			</tr>
+			<% end %>
+		</table>
+		<% end %>
+	</div>

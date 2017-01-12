@@ -1,0 +1,108 @@
+
+<div id = "single-appointment">
+	<%= link_to "Back to Admin Panel", controller: 'admin', action: 'admin_panel' %>	
+	<h2>Appointment</h2>
+	<br />
+	<h3>Info</h3>
+	<table id = "single-appointment-table">
+		<tr>
+			<td><b>Id</b></td>
+			<td><b>Date Submitted</b></td>
+			<td><b>Name</b></td>
+			<td><b>Address</b></td>
+			<td><b>Contact</b></td>
+		</tr>
+		<tr>
+			<td><%= @appointment.id %></td>
+			<td><%= @appointment.date_submitted %></td>
+			<td><%= @appointment.name %></td>
+			<td>
+			<%= @appointment.address  %><br />
+			<%= @appointment.city  %><br />
+			
+			
+			</td>
+			<td><b><%= @appointment.contact_type %>: </b><%= @appointment.contact_method %></td>
+		</tr>
+	</table>
+	<h3>Images</h3>
+	<div id = "appointment-tree-images">
+		<% if @images_attached == false %>
+			<b>No Images Included</b>
+		<% else %>
+		<table id = "appointment-tree-table">
+			<% i = 0 %>
+			<% @tree_image_array.each do |image_array| %>
+			<% i = i + 1 %>
+			<tr><td><h4>Tree #<%= i %></h4></td></tr>
+			<tr>
+				<% image_array.each do |img| %>
+					<% img_path = "/TreeImages/" + img %>
+					<td class = "image_right"><%= link_to img_path do %><%= image_tag(img_path, :alt => "Image", :class => 'tree-image') %><% end %> </td>
+				<% end %>
+			</tr>
+			<% end %>
+		</table>
+		<% end %>
+	</div>
+	<div id = "appointment-estimate-display">
+		<h3>Estimate</h3>
+		<% if @estimate.nil? %>
+			<h4>No Estimate Attached</h3>
+		<% else %>
+			<h4>Estimate Info</h4>
+			<table class = 'info-table'>
+				<tr>
+					<th>Name</th>
+					<th>Street Address</th>
+					<th>City</th>
+					<th>Number of Trees</th>
+					<th>Total Cost</th>
+				</tr>
+				<tr>
+					<td><%= @estimate.name %></td>
+					<td><%= @estimate.address %></td>
+					<td><%= @estimate.city %></td>
+					<td><%= @estimate.tree_quantity %></td>
+					<td><%= @estimate.total_cost %></td>
+				</tr>
+			</table>
+			
+			<h4>Tree Info</h4>
+			<table class = 'info-table'>
+				<tr>
+					<th>Tree #</th>
+					<th>Work Type</th>
+					<th>Tree Stories</th>
+					<th>Stump Removal</th>
+					<th>Vehicle Access</th>
+					<th>Breakables</th>
+					<th>Keeping Wood</th>
+				</tr>
+				<% @estimate_work.each do |est| %>
+					<% info_array = est.info.split('|') %>
+					<tr>
+						<td><%= est.tree_index %></td>
+						<td>
+							<%= est.work_type %>
+							<% if est.work_type == "Trim" or est.work_type == "Broken Limbs" %>
+								(<%= info_array[0] %>)
+							<% end %>
+						</td>
+						<td><%= est.tree_stories %></td>
+						<td>
+							<% if est.work_type == "Trim" or est.work_type == "Broken Limbs" %>
+								N/A
+							<% else %>
+								<%= info_array[0] %>
+							<% end %>
+						</td>
+						<td><%= info_array[1] %></td>
+						<td><%= info_array[2] %></td>
+						<td><%= info_array[3] %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% end %>
+	</div>
+</div>

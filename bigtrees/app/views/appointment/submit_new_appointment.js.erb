@@ -1,0 +1,8 @@
+$('#appointment-container').fadeOut(500, function(){
+	<% if @current_action == "Image" %>
+		$('#appointment-container').html("<%= escape_javascript(render(:partial => 'appointment/tree_image_upload')) %>").hide();
+	<% elsif @current_action == "Complete" %>
+		$('#appointment-container').html("<%= escape_javascript(render(:partial => 'appointment/appointment_complete')) %>").hide();
+	<% end %>
+	$('#appointment-container').fadeIn(500);
+});

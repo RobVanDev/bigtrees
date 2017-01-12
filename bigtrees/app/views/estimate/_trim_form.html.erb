@@ -1,0 +1,83 @@
+<%= form_tag url_for(:controller => 'estimate', :action => 'submit_tree_form'), :method => 'get', remote: @do_remote do %>
+
+<%= hidden_field_tag "work_id", @current_work.id %>
+<div id = "estimate-form">
+	<div id = "estimate-header" class = "green-header">
+		Tree #<%= @current_work.tree_index %> - <%= @current_work.work_type %>
+	</div>
+	<div id = "form-data">
+		<%= hidden_field_tag 'do_remote', @do_remote %>
+		<table class = "form-table">
+			<tr>
+				<td>Size of Tree</td>
+				<td><%= select_tag 'size', options_for_select(["1 Story", "2 Stories", "3 Stories"], "1 Story") %></td>
+				<td class = "tooltip-element">
+					<a href="/estimate/estimate_tooltips?tooltip=Size" data-toggle="modal" data-target="#info-modal" class="modal-link"><%= image_tag "Info.png" %></a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>What percentage of the tree needs to be trimmed or removed?</td>
+				<td>
+					<%= select_tag 'percentage', options_for_select(@trim_options) %>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Is there vehicle access to the base of the tree?</td>
+				<td>
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:vehicle, "yes") %>
+						<%= label_tag(:vehicle_yes, "Yes") %>
+					</div>
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:vehicle, "no", :checked => 'true') %>
+						<%= label_tag(:vehicle_no, "No") %>
+					</div>
+				</td>
+				<td class = "tooltip-element">
+					<a href="/estimate/estimate_tooltips?tooltip=Vehicle" data-toggle="modal" data-target="#info-modal" class="modal-link"><%= image_tag "Info.png" %></a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Anything breakable below the tree that cannot be moved?</td>
+				<td>
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:break, "yes") %>
+						<%= label_tag(:break_yes, "Yes") %>
+					</div>
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:break, "no", :checked => 'true') %>
+						<%= label_tag(:break_no, "No") %>
+					</div>
+				</td>
+				<td class = "tooltip-element">
+					<a href="/estimate/estimate_tooltips?tooltip=Breakables" data-toggle="modal" data-target="#info-modal" class="modal-link"><%= image_tag "Info.png" %></a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class = "no-border">Will you be keeping the wood?</td>
+				<td class = "no-border">
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:wood, "yes") %>
+						<%= label_tag(:wood_yes, "Yes") %>
+					</div>
+					<div id = "radio-button-box">
+						<%= radio_button_tag(:wood, "no", :checked => 'true') %>
+						<%= label_tag(:wood_no, "No") %>
+					</div>
+				</td>
+				<td class = "tooltip-element">
+					<a href="/estimate/estimate_tooltips?tooltip=Wood" data-toggle="modal" data-target="#info-modal" class="modal-link"><%= image_tag "Info.png" %></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id = "submit-button">
+		<%= submit_tag "Next", :id => 'submit-element' %>
+	</div>
+</div>
+
+<% end %>

@@ -1,0 +1,48 @@
+<% @index = 1 %>
+<% @estimate_work.each do |work| %>
+	<tr>
+		<td colspan = 2 class = "summary-table-heading">
+			Tree #<%= @index %>
+		</td>
+	</tr>
+	<tr>
+		<td class = "left-cell">
+			<b>Tree Height: </b>
+		</td>
+		<td class = "right-cell">
+			<% if work.tree_stories == 1 
+				size_string = "Story"
+			else
+				size_string = "Stories"
+			end %>
+			<%= work.tree_stories.to_s + " " + size_string %>
+		</td>
+	</tr>
+	<tr>
+		<% info_array = work.info.split("|") %>
+		<td>
+			<b>Work Included</b>
+		</td>
+		<td>
+			<b>Discounts Applied</b>
+		</td>
+	</tr>
+	<tr>
+		<td class = "summary-list-cell">
+			<ul>
+				<li><%= parse_work_action(work.work_type, info_array) %></li>
+				<% if info_array[0].casecmp("Yes") == 0 %><li>Stump Removal</li><% end %>
+				<% if info_array[3].casecmp("No") == 0 %><li>Wood Removal</li><% end %>
+			</ul>
+		</td>
+		<td class = "summary-list-cell">
+			<ul>
+				<% discount = "False" %>
+				<% if info_array[1].casecmp("No") == 0 %><% discount = "True" %><li>Vehicle Access to Tree</li><% end %>
+				<% if info_array[2].casecmp("No") == 0 %><% discount = "True" %><li>No Breakables</li><% end %>
+				<% if discount == "False" %>N/A<% end %>
+			</ul>
+		</td>
+	</tr>
+	<% @index += 1 %>
+<% end %>

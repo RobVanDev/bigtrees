@@ -1,0 +1,4 @@
+$('#form-container').fadeOut(500, function(){
+	$('#form-container').html("<%= escape_javascript(render(:partial => 'estimate/job_question_form')) %>").hide();
+	$('#form-container').fadeIn(500);
+});

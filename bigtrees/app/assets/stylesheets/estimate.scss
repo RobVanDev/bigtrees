@@ -1,0 +1,480 @@
+// Place all the styles related to the estimate controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+	#disclaimer{
+		border-style: solid;
+		border-width: 1px 0 0 0;
+		border-color: #C9C9C9;
+
+		padding: 30px 25px 10px 25px;
+		width: 90%;
+		margin: 88px auto 20px auto;
+		text-align: center;
+		text-size-adjust: none;
+		font-size: 12pt;
+		//Hack
+		max-height: 5000em;
+		
+	}
+
+
+
+#new-page-content{
+	width: 100%;
+	display: block;
+}
+
+#form-container{
+	width: 55%;
+	margin-right: 0;
+	display: inline-block;
+	margin: 20px 0 0px 50px;
+
+}
+#estimate-form{
+	width: 100%;
+	
+	background-color: #E8E8E8;
+	position: relative;
+	
+	box-shadow: -2px 2px 5px #919191, 2px 0px 5px #919191;
+}
+
+
+
+#estimate-header{
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	color: white;
+	font-size: 18pt;
+	margin: 0 0 25px 0;
+}
+
+
+
+#form-data{
+	font-size: 12pt;
+	
+	
+	
+}
+
+
+.form-table{
+	width: 90%;
+	
+	margin: 0 auto;
+	
+}
+
+.main-form-table{
+	height: 450px;
+}
+
+.tree-form{
+	width: 100% !important;
+}
+
+.form-table td{
+	padding: 10px 0 10px 0;
+	width: 50%;
+	vertical-align: top;
+	
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #C9C9C9;
+}
+
+.tooltip-element{
+	vertical-align: middle !important;
+}
+
+.no-border{
+	border-width: 0 0 0 0 !important;
+}
+
+.address-form{
+	margin: 2px 0 2px 0;
+}
+
+
+
+#radio-button-box{
+		margin: 0 10px 0 10px;
+		width: 50px;
+		float: left;
+}
+
+.estimate-input{
+	width: 100%;
+}
+
+#submit-element{
+	margin: 10px 30px 10px auto;
+	font-size: 14pt;
+	background-color: #01380B;
+	color: white;
+	padding: 4px 10px;
+}
+
+#submit-element-disabled{
+	margin: 10px 30px 10px auto;
+	font-size: 14pt;
+	background-color: #01380B;
+	color: white;
+	padding: 4px 10px;
+	opacity: 0.5;
+}
+
+
+#submit-button{
+	text-align: right;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+#large-job-text{
+	width: 80%;
+	margin: 15px auto 0 auto;
+	text-align: center;
+}
+
+
+
+/* Final Estimate Page */
+
+#final-estimate-main{
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+#final-estimate-left{
+	width: 55%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px 5px 20px 20px;
+}
+
+#final-estimate-right{
+	width: 44%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px 20px 20px 5px;
+}
+
+#final-estimate-bottom{
+	width: 75%;
+	margin: 20px auto 0 auto;
+	font-size: 16pt;
+	text-align: center;
+	display: block;
+}
+
+#final-estimate-display{
+	
+	background-color: #E8E8E8;
+	width: 90%;
+	box-shadow: -2px 2px 5px #2B2B2B, 2px 0px 5px #2B2B2B;
+}
+
+#final-estimate-content{
+	font-weight: bold;
+	font-size: 16pt;
+	padding: 30px 30px 30px 50px;
+}
+
+#final-estimate-header{
+	width: 100%;
+	padding: 10px 10px 10px 20px;
+	color: white;
+	font-size: 22pt;
+	
+}
+
+#estimate-number{
+	font-size: 12pt;
+
+}
+
+#tax{
+	font-size: 10pt;
+}
+
+#final-estimate-footer{
+	background-color: #454343;
+	width: 100%;
+	color: white;
+	padding: 10px 10px 10px 20px;
+	font-size: 12pt;
+}
+
+#estimate-id-display{
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
+	background-color: #6E6E6E;
+	color: white;
+	height: 110px;
+}
+
+#estimate-id{
+	padding: 20px 30px 15px 20px;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+#estimate-id-footer{
+	padding: 5px 20px 20px 20px;
+	font-size: 10pt;
+}
+
+#summary{
+	width: 100%;
+	margin: 0 auto 0 auto;
+	
+
+}
+
+#summary-header{
+	font-size: 24pt;
+	width: 100%;
+
+	margin: 0 auto 0 auto;
+	background-color: #01380B;
+	color: white;
+	padding: 10px 10px 10px 20px;
+}
+
+#summary-content{
+	width: 100%;
+	margin: 0 auto;
+	border-color: grey;
+	border-width: 0 2px 2px 2px;
+	border-style: solid;
+}
+
+#summary-table{
+	width: 100%;
+}
+
+#summary-table td{
+	padding: 8px;
+}
+
+#summary-table .left-cell{
+	vertical-align: top;
+}
+
+#summary-table .right-cell{
+
+}
+
+.summary-list-cell{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.summary-table-heading{
+	text-align: center;
+	background-color:#E8E8E8;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+#book-appointment{
+	border-style: solid;
+	border-color: #6E6E6E;
+	border-width: 2px;
+	
+	background-color: #E8E8E8;
+	padding: 15px;
+	width: 90%;
+	margin-top: 20px;
+}
+
+#book-appointment h2{
+	font-size: 22pt;
+	margin-top: 5px;
+	padding-bottom: 10px;
+	border-color: gray;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+}
+
+#book-appointment p{
+	font-size: 14pt;
+	text-align: center;
+}
+
+#email-estimate{
+	background-color: #E8E8E8;
+	padding: 0 25px 0 25px;
+	width: 90%;
+	margin-top: 20px;
+	font-size: 12pt;
+	
+	border-style: solid;
+	border-color: #6E6E6E;
+	border-width: 2px;
+	height: 100%;
+	min-height: 170px;
+
+}
+
+#email-estimate-content{
+	margin: 40px auto 0 auto;
+	text-align: center;
+}
+
+#estimate-sent{
+	margin-top: 70px;
+	font-size: 14pt;
+}
+
+
+#email-estimate h3{
+	font-size: 14pt;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+#email-estimate table{
+	width: 90%;
+	margin: 40px auto 20px auto;
+	
+}
+
+#email-estimate #email-form{
+	width: 300px;
+}
+
+.submit-email{
+	font-size: 12pt;
+	background-color: #01380B;
+	color: white;
+	width: 50px;
+}	
+
+#book-appointment-button{
+	width: 70%;
+	//background-color: #00470D;
+	
+	background: linear-gradient(rgba(1,56,11,0), rgba(1,56,11,1));
+	background-color: #005710;
+	border-style:solid;
+	border-width: 5px;
+	border-color:#01380B;
+	
+	color: white;
+	font-size: 14pt;
+	padding: 10px 10px 10px 10px;
+	
+	margin: 20px auto 10px auto;
+	text-align: center;
+}
+
+#book-appointment-button:hover{
+	background-color: #01380B;
+}
+
+#book-appointment-button a{
+	color: white;
+}
+
+
+/* New Estimate Page */
+
+#estimate-lookup{
+	width: 95%;
+	margin: 25px auto 0 auto;
+	padding: 5px;
+	
+}
+
+#estimate-description{
+	padding: 5px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+#estimate-description > h3{
+	margin-top: 0px;
+}
+
+#estimate-lookup-table{
+	width: 100%;
+}
+
+.estimate-lookup-form{
+	width: 100%;
+}
+
+#estimate-lookup-table td{
+	padding: 5px;
+}
+
+#estimate-lookup-table{
+	margin-top: 5px;
+}
+
+#right-sidebar{
+	width: 35%;
+	display: inline-block;
+	border-color: #C9C9C9;
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	vertical-align: top;
+	margin: 20px 0 0 20px;
+	padding: 0 10px 0 10px;
+}
+
+
+
+
+#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #111;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #111;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }

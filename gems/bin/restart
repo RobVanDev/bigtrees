@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/home/occamsrazor/webapps/bigtrees/bin/stop
+/home/occamsrazor/webapps/bigtrees/bin/start

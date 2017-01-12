@@ -1,0 +1,7 @@
+<% if is_number(@num_trees) %>
+	$('#work-needed').html("<%= escape_javascript(render(:partial => 'estimate/tree_work')) %>");
+	$('#submit-button').html("<%= escape_javascript(submit_tag "Next", :id => 'submit-element') %>");
+<% else %>
+	$('#work-needed').html("<%= escape_javascript(render(:partial => 'estimate/large_job')) %>");
+	$('#submit-button').html("<%= escape_javascript(submit_tag "Next", :id => 'submit-element-disabled', disabled: true) %>");
+<% end %>

@@ -1,0 +1,71 @@
+<div id = "admin-panel">
+	<div id = "admin-left-side">
+		<h2>Recent Estimates</h2>
+		<div id = "admin-table-container">
+			<table id = "admin-estimate-table">
+				<tr>
+					<td><b>Id</b></td>
+					<td><b>Date</b></td>
+					<td><b>Name</b></td>
+					<td><b>Quantity</b></td>
+					<td><b>Contact</b></td>
+					<td><b>Status</b></td>
+					<td><b>Last Change</b></td>
+					<td></td>
+				</tr>
+				<tr>
+				<% @estimates.each do |est| %>
+				<tr>
+					<td><%= est.id %></td>
+					<td><%= est.date_submitted %></td>
+					<td><%= est.name %></td>
+					<td><%= est.tree_quantity %></td>
+					<td><%= est.contact_method %></td>
+					<td><%= est.response %></td>
+					<td><%= est.last_change %></td>
+					<td><%= link_to "View", controller: 'admin', action: 'view_estimate_by_id', estimate_id: est.id %></td>
+				</tr>
+			<% end %>
+				</tr>
+			</table>
+		</div>
+		<br />
+		<%= link_to "View All Estimates", controller: 'admin', action: 'view_all_appointments_and_estimates' %>
+			<div id="excel-download">
+			<%= link_to "Download Estimate Data", controller: 'admin', action: 'get_estimate_spreadsheet' %>
+		</div>
+	</div>
+
+	
+	<div id = "stats-display">
+		<h2>Site Stats</h2>
+		<table id = "stats-table">
+			<tr>
+				<td>-</td>
+				<td colspan = 6 style = "text-align: center; background-color: #E8E8E8"><b>Estimates</b></td>
+			</tr>
+			<tr>
+				<th>Month</th>
+				<th>Views</th>
+				<th>Started</th>
+				<th>Stopped at Survey</th>
+				<th>Stopped at Images</th>
+				<th>Completed</th>
+				<th>%</th>
+			</tr>
+
+			<% @statsArray.each do |stat_hash| %>
+				<tr>
+					<td><%= stat_hash[:date] %></td>
+					<td><%= stat_hash[:est_requested] %></td>
+					<td><%= stat_hash[:est_in_progress] + stat_hash[:est_images] + stat_hash[:est_complete] %></td>
+					<td><%= stat_hash[:est_in_progress] %></td>
+					<td><%= stat_hash[:est_images] %></td>
+					<td><%= stat_hash[:est_complete] %></td>
+					<td><%= stat_hash[:est_percentage] %></td>
+					
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

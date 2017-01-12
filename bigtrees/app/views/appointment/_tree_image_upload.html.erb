@@ -1,0 +1,37 @@
+<div id = "book-appointment-container">
+<%= form_tag( {:controller => 'appointment', :action => 'submit_new_appointment'}, method: :put, multipart: true) do %>
+<%= hidden_field_tag "appointment_id", @appt_id %>
+<%= hidden_field_tag "num_trees", @num_trees %>
+<%= hidden_field_tag 'submitted_action', @current_action %>
+<%= token_tag form_authenticity_token %>
+<div id = "appointment-header" class = "green-header">
+	Book an Appointment
+</div>
+	<div id = "image-upload-content">
+		<div id = "image-text">
+			<p>If possible, a picture tells us a thousand words!</p>
+			<p>You can save 2% off your final bill if you <br />upload pictures of your trees.</p>
+			<p>Submit up to three images of each tree.</p>
+		</div>
+		<table id = "image-table">
+			<% for i in 1..@num_trees.to_i %>
+				<tr><td><b>Tree #<%= i %></b></td></tr>
+				<% for j in 1..3 %>
+					<tr>
+						<td><%= file_field_tag 'tree_' + i.to_s + '_image_' + j.to_s, accept: 'image/png,image/gif,image/jpeg,image/jpg', id: "tree-upload-field" %></td>
+					</tr>
+				<% end %>
+			<% end %>
+
+		</table>
+	</div>
+	<div id = "appointment-submit-buttons">
+		<div id = "appointment-skip">
+			<%= submit_tag "Skip", :id => 'submit-element' %>
+		</div>
+		<div id = "image-submit">
+			<%= submit_tag "Next", :id => 'submit-element' %>
+		</div>
+	</div>
+<% end %>
+</div>

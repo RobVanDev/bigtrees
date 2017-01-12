@@ -1,0 +1,75 @@
+<div id = "summary">
+	<div id = "summary-header" class ="green-header">
+		Summary
+	</div>
+	
+	<div id = "summary-content">
+	<table id = "summary-table">
+		<tr>
+			<td colspan = 2 class = "summary-table-heading">
+				Personal Info
+			</td>
+		</tr>
+		<tr>
+			<td class = "left-cell">
+				<b>Name:</b>
+			</td>
+			<td class = "right-cell">
+				<%= @current_estimate.name %> <br />
+			</td>
+		</tr>
+		<tr>
+			<td class = "left-cell">
+				<b>Address:</b>
+			</td>
+			<td class = "right-cell">
+				<%= @current_estimate.address %> <br />
+				<%= @current_estimate.city %> <br />
+			</td>
+		</tr>
+		<tr>
+			<td class = "left-cell">
+				<b>Contact Info:</b>
+			</td>
+			<td class = "right-cell">
+				<%= @current_estimate.contact_type %>: <%= @current_estimate.contact_method %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan = 2 class = "summary-table-heading">Services Included</td>
+		</tr>
+		<tr>
+			<td colspan = 2>
+				- Tree Removal/Trimming <br />
+				<% if @current_estimate.stump_removal == "yes" %>
+				- Stump Removal <br />
+				<% end %>
+				<% if @current_estimate.wood_removal == "yes" %>
+				- Wood Disposal <br />
+				<% end %>
+			</td>
+
+		</tr>
+		<tr>
+			<td colspan = 2 class = "summary-table-heading">Discounts Applied For</td>
+		</tr>
+		<tr>
+			<td colspan = 2>
+				<% discount_applied = false %>
+				<% if @current_estimate.vehicle_access == "yes" %>
+					<% discount_applied = true %>
+				- Vehicle Access to Trees <br />
+				<% end %>
+				<% if @current_estimate.breakables == "no" %>
+					<% discount_applied = true %>
+				- No Breakables <br />
+				<% end %>
+				<% if discount_applied == false %>
+				- None <br />
+				<% end %>
+			</td>
+
+		</tr>
+	</table>
+	</div>
+</div>
