@@ -17,7 +17,10 @@
 			});
 		</script>
 	<div id = "content-main">
-		<div id = "header-container" class = "green-header">
+	
+		<div class = "row">
+		<div class = ".col-md-3"></div>
+		<div id = "header-container" class = "green-header .col-md-6" >
 			<div id = "header-content">
 				<div id = "header-title">
 					<%= image_tag "BigTreeLogoSmall.png", :id => 'header-image' %>
@@ -29,27 +32,43 @@
 				</div>
 			</div>
 		</div>
+		<div class = ".col-md-3"></div>	
+		</div>
 		
-		<div id = "nav-bar-container">
-			<div id = "nav-bar">
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<ul class="nav navbar-nav">
-					<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>
-					<li class = "menu-item"><%= link_to "About Us", url_for(controller: 'main', action: 'about_us') %></li>
-					<li class = "menu-item"><%= link_to "Free Estimate", controller: "estimate", action: "new" %></li>
-					<li class = "menu-item"><%= link_to "Contact Us", controller: "main", action: "contact_us" %></li>
-				</ul>
+		<div class = "row">
+			<div class = ".col-md-3"></div>
+			
+			<div id = "nav-bar-container" class = ".col-md-6">
+				<div id = "nav-bar">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<ul class="nav navbar-nav">
+						<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>
+						<li class = "menu-item"><%= link_to "About Us", url_for(controller: 'main', action: 'about_us') %></li>
+						<li class = "menu-item"><%= link_to "Free Estimate", controller: "estimate", action: "new" %></li>
+						<li class = "menu-item"><%= link_to "Contact Us", controller: "main", action: "contact_us" %></li>
+					</ul>
+				</div>
 			</div>
+			
+			<div class = ".col-md-3"></div>
 		</div>
-		<div id = "main-box">
-			<%= yield %>
-
-		</div>
-		<div id = "footer-container">
-			Certified by the Ontario Colleges of Trade<br />
-			Fully Insured by State Farm
+		<div class="row">
+			<div class = ".col-md-3"></div>
+			<div id = "main-box" class = ".col-md-6">
+				<%= yield %>
+			</div>
+			<div class = ".col-md-3"></div>
 		</div>
 		
+		<div class="row">
+			<div class = ".col-md-3"></div>
+			<div id = "footer-container" class = ".col-md-6">
+				Certified by the Ontario Colleges of Trade<br />
+				Fully Insured by State Farm
+			</div>
+			<div class = ".col-md-3"></div>
+		</div>
+
 		<div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
