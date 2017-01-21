@@ -2,20 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
 html{
 	height: 100%;
     overflow-y: scroll;
 	
 }
 
-body{
+body{	
 	height: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
 	background-color: #EBEBEB;
-	font-size: 16px;
+	font-size: 14px;
+	line-height: 180%;
 	
-	font-family: "Georgia" !important;
+	font-family: "Nunito Sans" !important;
 }
 
 #content-main{
@@ -27,7 +30,7 @@ body{
 
 #main-box{
 	width: 100%;
-	background-color: white;
+	background-color: #ececec;
 	min-height: 500px;
 	overflow: hidden;
 	position: relative;
@@ -36,7 +39,7 @@ body{
 
 #feature-panel{
 	height: 380px;
-	background-image: image-url("TreeFeatureLarge.jpg");
+	background-image: image-url("TreeFeatureLargeLowSat.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -45,62 +48,54 @@ body{
 	border-width: 0 0 0 0;
 	border-color: #00470D;
 	border-style: solid;
-}
-
-#mission-statement{
-	width: 100%;
-	text-align: center;
-	font-size: 16pt;
 	
-	padding: 15px 30px;
-	background-color: #00470D;
-	color: white;
+	position: relative;
+}
+
+#feature-box{
+	background-color: rgba(24, 74, 0, 0.85);
 	
-		border-style: solid;
-	border-width: 0 0 2px 0;
-	border-color: #01380B;
-}
-
-#mission-statement p{
-	margin-bottom: 0;
-}
-
-#user-reviews{
-	width: 100%;
-	padding: 0;
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-#user-reviews-header{
-	background-color: #E8E8E8;
-	font-size: 16pt;
-	padding: 15px;
-	
+	border-color: white;
 	border-style: solid;
-	border-width: 0 0 2px 0;
-	border-color: #01380B;
-}
-
-#user-reviews h3{
-	margin-bottom: 0px;
-}
-
-#review-title{
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
+	border-width: 4px;
+	
+	height: 220px;
+	color: white;
 	font-size: 16pt;
+	
+	padding: 40px;
+	width: 60%;
+	
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+
+
 }
 
-.review{
-	color: gray;
-	font-size: 14pt;
-	width: 100%;
-	padding: 0 40px;
+#feature-inner-box{
 	text-align: center;
-	margin: 45px 0 0 0;
+	
+	width: 90%;
+	height: 80%;
+	
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	
+	padding:30px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
 }
+
+.estimate-link{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline
+	
+}
+
 
 #feature-title{
 		background-color:rgba(1, 56, 11, 0.85);
@@ -185,8 +180,7 @@ body{
 
 
 .green-header{
-	//background: linear-gradient(#005710, #01380B);
-	background: #266130;
+	background: #184a00;
 }
 
 #footer-container{
