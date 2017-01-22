@@ -1,11 +1,14 @@
 <div class = "row" id = "feature-row">
 <div id = "feature-panel" class = "col-md-6 col-md-offset-3">
-	<div id = "feature-box">
-		<div id = "feature-inner-box">
-			<%= link_to "Get Your Free Estimate", {controller: 'estimate', action: 'new'}, class: 'estimate-link' %> <br /> <br />
-			See for yourself just how easy and affordable your tree care needs can be.
+	<%= link_to controller: 'estimate', action: 'new' do %>
+		<div id = "feature-box">
+			<div id = "feature-inner-box">
+				<div class = "estimate-link">Get Your Free Estimate</div>
+				 <br /> 
+				See for yourself just how easy and affordable your tree care needs can be.
+			</div>
 		</div>
-	</div>
+	<% end %>
 </div>
 </div>
 
