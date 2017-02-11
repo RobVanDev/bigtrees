@@ -39,15 +39,13 @@
 
 					
 					<div id = "nav-bar-container" class = "col-md-6 col-md-offset-3">
-						<div id = "nav-bar">
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<ul class="nav navbar-nav">
-								<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>
-								<li class = "menu-item"><%= link_to "About Us", url_for(controller: 'main', action: 'about_us') %></li>
-								<li class = "menu-item"><%= link_to "Free Estimate", controller: "estimate", action: "new" %></li>
-								<li class = "menu-item"><%= link_to "Contact Us", controller: "main", action: "contact_us" %></li>
-							</ul>
-						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<ul class="nav navbar-center">
+							<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>
+							<li class = "menu-item"><%= link_to "About Us", url_for(controller: 'main', action: 'about_us') %></li>
+							<li class = "menu-item"><%= link_to "Free Estimate", controller: "estimate", action: "new" %></li>
+							<li class = "menu-item"><%= link_to "Contact Us", controller: "main", action: "contact_us" %></li>
+						</ul>
 					</div>
 					
 				</div>

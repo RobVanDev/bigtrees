@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
+:root {
+	--main-color: #184a00;
+}
+
 html{
 	height: 100%;
     overflow-y: scroll;
@@ -14,7 +18,7 @@ body{
 	height: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	background-color: #EBEBEB;
+	background-color: #F7F7F7;
 	font-size: 14px;
 	line-height: 180%;
 	
@@ -26,6 +30,32 @@ body{
   width: 100%;
 }
 
+.shadow-box{
+	box-shadow: 2px 4px 5px #A6A6A6, -2px 4px 5px #A6A6A6;
+}
+
+.white-row{
+	background-color: white;
+}
+
+.grey-row{
+	background-color: #F7F7F7;
+}
+
+.no-padding{
+	padding: 0px !important;
+}
+
+.title-header{
+	color: black;
+	padding: 20px;
+	font-size: 20pt;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 0 0 4px 0;
+	border-color: var(--main-color);
+}
+
 #content-main{
 	width: 960px;
 	margin: 0 auto;
@@ -35,7 +65,7 @@ body{
 
 #main-box{
 	width: 100%;
-	background-color: #ececec;
+	background-color: #F7F7F7;
 	min-height: 500px;
 	overflow: hidden;
 	position: relative;
@@ -119,47 +149,12 @@ body{
 	display: block;
 	margin: 0 auto 0 auto;
 }
-#ontario-feature{
-	position: relative;
-	width: 48%;
-	float: left;
-}
 
 #buttons{
 	width: 70%;
 	margin: 0 auto;
 }
 
-.front-page-button{
-	width: 55%;
-	margin: 100px auto;
-	background-color: #00470D;
-	
-	border-style:solid;
-	border-width: 6px;
-	border-color:#01380B;
-	
-	color: white;
-	font-size: 20pt;
-	padding: 20px 20px;
-	text-align: center;
-	
-	display: block;
-}
-
-.front-page-button a{
-	color: white;
-}
-
-.front-page-button:hover{
-	background-color: #01380B;
-}
-
-.button-text{
-	display: inline-block;
-	vertical-align: middle;
-	
-}
 
 #feature-image{
 	width: 350px;
@@ -189,7 +184,7 @@ body{
 
 
 .green-header{
-	background: #184a00;
+	background: var(--main-color);
 }
 
 #footer-container{
@@ -207,9 +202,7 @@ body{
 }
 
 #header-content{
-	width: 96%;
-	margin: 0 auto;
-	padding: 0 0 5px 0;
+	width: 100%;
 }
 
 #header-title  h1{
@@ -242,25 +235,26 @@ body{
 }
 
 #nav-bar-container{
-	width: 100%;
 	height: 60px;
 }
 
+.navbar-center {
+	text-align: center;
+}
 
-#nav-bar{
-	width: 96%;
-	margin: 0 auto;
-	
+.nav > li{
+	display: inline-block;
+	float: none;
 }
 
 .nav > li > a{
-	padding: 20px 20px 20px 20px;
-	
+	padding: 20px 40px;
+	display:inline-block;
 	font-size: 14pt;
 	color: #F5F5F5;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-	background-color: #184a00;
+	background-color: var(--main-color);
 }
 
 #style-line{
@@ -295,36 +289,20 @@ body{
 }
 
 #about-us{
-	background-color: #E8E8E8;
-	box-shadow: -2px 2px 5px #919191, 2px 0px 5px #919191;
+	padding: 10px 20px;
 }
 
-#about-us-header{
-	background: linear-gradient(#005710, #01380B);
-	color: white;
-	width: 100%;
-	padding: 10px;
-	font-size: 20pt;
-}
 
 #about-us-text{
 	float: left;
-	width: 50%;
+	font-size: 14pt;
+	width: 70%;
+	padding: 0px 0px 0px 5%;
 }
 
 #about-us-image-container{
-	width: 47%;
-	margin-left: 3%;
+	width: 30%;
 	float: left;
-	
-
-	background-color: rgba(1,56,11,0.8);
-	padding: 10px;
-}
-
-#services-image{
-	background-color: rgba(1,56,11,0.8);
-	padding: 10px;
 }
 
 #about-us-image{
@@ -337,48 +315,36 @@ body{
 	margin-top: 10px;
 }
 
-#services-container{
-	margin-top: 20px;
-	margin-bottom: 22px;
-}
-
-#services-image-container{
-	width: 35%;
-	float: left;
-}
-
-#services-image{
-	width: 100%;
-}
-
-#services-table-container{
-	width: 65%;
-	float: left;
-	padding: 35px 0px 20px 40px;
-}
-#services-table{
-	width: 100%;
-	margin: 0 auto;
-	table-layout: fixed;
-}
-#services-table td{
+#services-box{
+	background-color: white;
+	margin: 20px 0;
 	padding: 20px;
+	
 	border-style: solid;
-	border-width: 1px;
-	border-color: #C9C9C9;
+	border-width: 8px 0 0 0;
+	border-color: var(--main-color);
+}
+
+#services-title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#services-description{
+	padding: 10px 0;
+}
+
+#services-list{
+	list-style: none;
+	-webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
 	text-align: center;
 }
 
-#services-header{
-	width: 100%;
-	font-size: 20pt;
+#services-list > li{
 	padding: 10px;
-	
-	border-style: solid;
-	border-color: black;
-	border-width: 0 0 1px 0;
-	
-	margin-bottom: 20px;
+	font-weight: bold;
 }
 
 //CONTACT
