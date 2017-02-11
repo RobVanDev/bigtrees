@@ -89,7 +89,7 @@ body{
 .sub-page-header-title{
 	background-color: var(--main-color-transparent);
 
-	padding: 20px 30px;
+	padding: 25px 40px;
 	display: inline-block;
 	
 	position: absolute;
@@ -104,7 +104,7 @@ body{
 .sub-page-header-text{
 	color: white;
 	font-size: 20pt;
-	padding: 15px;
+	padding: 20px 25px;
 	border-color: white;
 	border-style: solid;
 	border-width: 2px;
@@ -113,7 +113,7 @@ body{
 
 .li-border-bottom{
 	border-style: solid;
-	border-color: grey;
+	border-color: var(--main-color);
 	border-width: 0 0 1px 0;
 }
 
@@ -323,7 +323,7 @@ body{
 }
 
 #about-us{
-	padding: 10px 15px;
+	padding: 20px 15px;
 	margin-top: 20px;
 }
 

@@ -11,69 +11,84 @@
 	});
 </script>
 
-<div id = "new-page-content">
-	<div id ="form-container">
-
-		<%= form_tag url_for(:controller => 'estimate', :action => 'submit_new_estimate'), :method => 'get', remote: true, id: "est-form" do %>
-		<div id = "estimate-form">
-			<div id = "estimate-header" class = "green-header">
-				My Estimate
-			</div>
-			<div id = "form-data">
-				<table class = "form-table">
-					<tr>
-						<td>Name:</td>
-						<td><%= text_field_tag 'name', '', :class => "estimate-input", :required => true %></td>
-					</tr>
-					<tr>
-						<td>Preferred Contact Method: </td>
-						<td><%= select_tag "contact_type", options_for_select(['Phone', 'Email', 'Text']) %></td>
-					</tr>
-					<tr>
-						<td><div id = "contact-entry-name">Phone Number:</div></td>
-						<td><div id = "contact-entry-field"><%= text_field_tag 'contact_method', '', :class => 'estimate-input', :required => true %></div></td>
-						
-					</tr>
-					<tr>
-						<td>Address of Trees:</td>
-						<td><%= text_field_tag 'address_line_1', '', :placeholder => "Street Address", :class => "address-form estimate-input", :required => true %>
-							<%= text_field_tag 'city', '', :placeholder => "City", :class => "address-form estimate-input", :required => true %>
-						</td>
-					</tr>
-
-					<tr>
-						<td>Number of Trees:</td>
-						<td><%= select_tag 'num_trees', options_for_select(["1", "2", "3", "4+"], "1"), :id => 'tree-value', :class => "estimate-input" %></td>
-					</tr>
-					<tr id = "work-needed">
-						<%= render "tree_work" %>
-					</td>
-					</tr>
-				</table>
-
-
-			</div>
-			<div id = "submit-button">
-				<%= submit_tag "Next", :id => 'submit-element' %>
+<div class = "row header-image sub-page-header">
+	<div class = "col-md-6 col-md-offset-3 sub-header-column">
+		<div class = "sub-page-header-title">
+			<div class = "sub-page-header-text">
+				Free Estimate
 			</div>
 		</div>
-		<% end %>
 	</div>
-	
+</div>
+
+<div class = "row white-row">
+	<div id = "form-column" class = "col-md-6 col-md-offset-3">
+		<div id ="form-container">
+
+			<%= form_tag url_for(:controller => 'estimate', :action => 'submit_new_estimate'), :method => 'get', remote: true, id: "est-form" do %>
+			<div id = "estimate-form">
+				<div id = "estimate-header" class = "green-header">
+					My Estimate
+				</div>
+				<div id = "form-data">
+					<table class = "form-table">
+						<tr>
+							<td>Name:</td>
+							<td><%= text_field_tag 'name', '', :class => "estimate-input", :required => true %></td>
+						</tr>
+						<tr>
+							<td>Preferred Contact Method: </td>
+							<td><%= select_tag "contact_type", options_for_select(['Phone', 'Email', 'Text']) %></td>
+						</tr>
+						<tr>
+							<td><div id = "contact-entry-name">Phone Number:</div></td>
+							<td><div id = "contact-entry-field"><%= text_field_tag 'contact_method', '', :class => 'estimate-input', :required => true %></div></td>
+							
+						</tr>
+						<tr>
+							<td>Address of Trees:</td>
+							<td><%= text_field_tag 'address_line_1', '', :placeholder => "Street Address", :class => "address-form estimate-input", :required => true %>
+								<%= text_field_tag 'city', '', :placeholder => "City", :class => "address-form estimate-input", :required => true %>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Number of Trees:</td>
+							<td><%= select_tag 'num_trees', options_for_select(["1", "2", "3", "4+"], "1"), :id => 'tree-value', :class => "estimate-input" %></td>
+						</tr>
+						<tr id = "work-needed">
+							<%= render "tree_work" %>
+						</td>
+						</tr>
+					</table>
+
+				</div>
+				<div id = "submit-button">
+					<%= submit_tag "Next", :id => 'submit-element' %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+		
 		<div id = "right-sidebar">
 			<div id = "estimate-description" style = "font-size: 12pt">
 				<h3>Getting an Estimate Couldn't be Easier!</h3>
 				To get started, all we need is a few details about your job, and some pictures of the trees that need work. <br /><br /> We will review the work you need, and contact you with our estimated cost.<br /> No committment, no obligation. <br /><br />If you would simply like to discuss your job with us instead, please feel free to <%= link_to "Contact Us", :controller => 'main', :action => 'contact_us' %>.
 			</div>
 		</div>
+		
+	</div>
+
 </div>
 
-<div id = "disclaimer">
-	All Data is Confidential and will NOT be shared.
+<div class = "row grey-row">
+	<div id = "disclaimer" class = "col-md-6 col-md-offset-3">
+		All Data is Confidential and will NOT be shared.
+			
+		<br /> <br />
 		
-	<br /> <br />
-	
-	Costs displayed are for estimate purposes only. All efforts will be made to match the estimated price, but factors that affect the length or complexity of the job may change the final cost.
+		Costs displayed are for estimate purposes only. All efforts will be made to match the estimated price, but factors that affect the length or complexity of the job may change the final cost.
+	</div>
 </div>
 
 

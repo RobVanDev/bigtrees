@@ -1,12 +1,42 @@
-
-	<div id = 'contact-us-header' class = 'green-header'>Contact Us</div>
-	<div id = 'contact-us'>
-		<div id = 'contact-box-left' class = 'contact-box'>
-		Phone<br />1-877-542-5551
-		</div>
-		<div id = 'contact-box-right' class = 'contact-box'>
-		Email<br />tbrewer@bigislandgroup.ca
+<div class = "row header-image sub-page-header">
+	<div class = "col-md-6 col-md-offset-3 sub-header-column">
+		<div class = "sub-page-header-title">
+			<div class = "sub-page-header-text">
+				Contact Us
+			</div>
 		</div>
 	</div>
+</div>
 
-<%= image_tag "AppointmentComplete.jpg", :id => 'appointment-complete-image' %>
+<div class = "row white-row">
+	<div class = "col-md-4 col-md-offset-3">
+		<div id = "contact-form">
+			<%= form_tag url_for(:controller => 'estimate', :action => 'submit_new_estimate'), :method => 'post' do %>
+				<table class = "form-table">
+					<tr>
+						<td>
+							Name: <br />
+							<%= text_field_tag 'name', '', :required => true %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Email: <br />
+							<%= text_field_tag 'email', '', :required => true %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						Message: <br />
+						<%= text_area_tag 'message', '', :required => true %>
+						</td>
+					</tr>
+					
+				</table>
+			
+			<% end %>
+		
+		</div>
+	</div>
+</div>
+
