@@ -6,6 +6,7 @@
 
 :root {
 	--main-color: #184a00;
+	--main-color-transparent: rgba(24, 74, 0, 0.85);
 }
 
 html{
@@ -39,7 +40,7 @@ body{
 }
 
 .grey-row{
-	background-color: #F7F7F7;
+	background-color: #EDEDED;
 }
 
 .no-padding{
@@ -72,11 +73,48 @@ body{
 	min-height: 720px;
 }
 
-#feature-row{
+.header-image{
 	background-image: image-url("TreeFeatureLargeLowSat.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.sub-page-header{
+	height: 150px;
+	position: relative;
+
+}
+
+.sub-page-header-title{
+	background-color: var(--main-color-transparent);
+
+	padding: 20px 30px;
+	display: inline-block;
+	
+	position: absolute;
+	bottom: -20px;
+	left: 15px;
+}
+
+.sub-header-column{
+	height: 100%;
+}
+
+.sub-page-header-text{
+	color: white;
+	font-size: 20pt;
+	padding: 15px;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	font-weight: bold;
+}
+
+.li-border-bottom{
+	border-style: solid;
+	border-color: grey;
+	border-width: 0 0 1px 0;
 }
 
 #feature-panel{
@@ -92,7 +130,7 @@ body{
 }
 
 #feature-box{
-	background-color: rgba(24, 74, 0, 0.85);
+	background-color: var(--main-color-transparent);
 	
 	border-color: white;
 	border-style: solid;
@@ -218,10 +256,6 @@ body{
 	display: inline-block;
 }
 
-#header-image{
-	
-}
-
 #contact-info{
 	font-size: 15pt;
 	display: block;
@@ -289,7 +323,8 @@ body{
 }
 
 #about-us{
-	padding: 10px 20px;
+	padding: 10px 15px;
+	margin-top: 20px;
 }
 
 
@@ -301,7 +336,7 @@ body{
 }
 
 #about-us-image-container{
-	width: 30%;
+	width: 25%;
 	float: left;
 }
 
@@ -326,12 +361,17 @@ body{
 }
 
 #services-title{
-	font-size: 20px;
+	font-size: 20pt;
 	font-weight: bold;
 }
 
 #services-description{
 	padding: 10px 0;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	font-size: 14pt;
+	border-color: var(--main-color);
 }
 
 #services-list{
