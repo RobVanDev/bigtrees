@@ -7,6 +7,7 @@
 :root {
 	--main-color: #184a00;
 	--main-color-transparent: rgba(24, 74, 0, 0.85);
+	--bigtrees-grey: #EDEDED;
 }
 
 html{
@@ -19,7 +20,7 @@ body{
 	height: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	background-color: #F7F7F7;
+	background-color: var(--bigtrees-grey);
 	font-size: 14px;
 	line-height: 180%;
 	
@@ -66,7 +67,7 @@ body{
 
 #main-box{
 	width: 100%;
-	background-color: #F7F7F7;
+	background-color: var(--bigtrees-grey);
 	min-height: 500px;
 	overflow: hidden;
 	position: relative;
@@ -119,19 +120,17 @@ body{
 
 #feature-panel{
 	height: 420px;
-
 	padding-top: 0px;
 	padding-bottom: 20px;
 	border-width: 0 0 0 0;
 	border-color: #00470D;
 	border-style: solid;
-	
 	position: relative;
 }
 
 #feature-box{
 	background-color: var(--main-color-transparent);
-	
+
 	border-color: white;
 	border-style: solid;
 	border-width: 4px;
@@ -380,6 +379,7 @@ body{
     -moz-column-count: 3;
     column-count: 3;
 	text-align: center;
+	margin-bottom: 0;
 }
 
 #services-list > li{
@@ -388,45 +388,41 @@ body{
 }
 
 //CONTACT
-#contact-us-header{
+
+#contact-methods{
 	width: 90%;
-	font-size: 20pt;
-	color: white;
-	padding: 10px;
-	margin: 20px 50px 0 50px;
-}
-
-#contact-us{
-	width: 80%;
-	margin: 60px auto 0 auto;
-	text-align: center;
-}
-
-.contact-box{
-	min-height: 100px;
-	width: 350px;
-	font-size: 16pt;
-	
-	border-color: #C9C9C9;
-	border-width: 4px;
-	border-style: solid;
-	
+	margin: 40px auto;
 	display:flex;
-	justify-content:center;
-	align-items:center;
+	justify-content:space-between;
+}
+
+#contact-box{
+	width: 42%;
+	margin: 0 auto;
+	background-color: var(--main-color);
+	color: white;
+	white-space:nowrap;
+	padding: 20px 25px;
+}
+
+#contact-text{
+	text-align: center;
+	font-size: 16pt;
+	line-height: 2em;
+	padding: 10px 15px;
 	
-	padding: 30px 20px;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
 }
 
-#contact-box-left{
-	float: left;
-
+#contact-description{
+	font-size: 14pt;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0;
 }
-
-#contact-box-right{
-	float: right;
-}
-
 
 
 //MISC
