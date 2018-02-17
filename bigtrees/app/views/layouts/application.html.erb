@@ -2,13 +2,15 @@
 <html>
 <head>
   <title>That's A Big Tree</title>
+  <meta name="description" content="Tree Services, Removal and Maintenance in Toronto and the GTA, Ottawa, and Southern Ontario">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
 
   <%= csrf_meta_tags %>
   
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
- 
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   		<script>
@@ -19,15 +21,11 @@
 			
 		
 			<div class = "container-fluid">
-				<div class = "row green-header" id = "header-row">
-					<div id = "header-container" class = "col-md-6 col-md-offset-3" >
+				<div class = "row main-header" id = "header-row">
+					<div id = "header-container" class = "col-lg-6 col-lg-offset-3" >
 						<div id = "header-content">
 							<div id = "header-title">
-								<%= image_tag "BigTreeLogoSmall.png", :id => 'header-image' %>
-							</div>
-							<div id = "contact-info">
-								<b>Any Questions? </b><br />
-								1-877-542-5551	
+								<%= image_tag "BigTreeLogo-Re.png", :id => 'logo-image' %>
 							</div>
 						</div>
 					</div>
@@ -36,7 +34,7 @@
 				<div class = "row", id = "nav-bar-row">
 
 					
-					<div id = "nav-bar-container" class = "col-md-6 col-md-offset-3">
+					<div id = "nav-bar-container" class = "col-lg-6 col-lg-offset-3">
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<ul class="nav navbar-center">
 							<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>

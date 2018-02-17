@@ -12,7 +12,7 @@
 </script>
 
 <div class = "row header-image sub-page-header">
-	<div class = "col-md-6 col-md-offset-3 sub-header-column">
+	<div class = "col-lg-6 col-lg-offset-3 sub-header-column">
 		<div class = "sub-page-header-title">
 			<div class = "sub-page-header-text">
 				Free Estimate
@@ -22,7 +22,7 @@
 </div>
 
 <div class = "row white-row">
-	<div id = "form-column" class = "col-md-6 col-md-offset-3">
+	<div id = "form-column" class = "col-lg-6 col-lg-offset-3">
 		<div id ="form-container">
 
 			<%= form_tag url_for(:controller => 'estimate', :action => 'submit_new_estimate'), :method => 'get', remote: true, id: "est-form" do %>
@@ -71,7 +71,7 @@
 		</div>
 		
 		<div id = "right-sidebar">
-			<div id = "estimate-description" style = "font-size: 12pt">
+			<div id = "estimate-description">
 				<h3>Getting an Estimate Couldn't be Easier!</h3>
 				To get started, all we need is a few details about your job, and some pictures of the trees that need work. <br /><br /> We will review the work you need, and contact you with our estimated cost.<br /> No committment, no obligation. <br /><br />If you would simply like to discuss your job with us instead, please feel free to <%= link_to "Contact Us", :controller => 'main', :action => 'contact_us' %>.
 			</div>

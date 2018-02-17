@@ -5,8 +5,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
 :root {
-	--main-color: #184a00;
-	--main-color-transparent: rgba(24, 74, 0, 0.85);
+	--main-color: #8A0000;
+	--main-color-transparent: rgba(138, 0, 0, 0.85);
+	--secondary-color: #D1B500;
+	--secondary-color-transparent: rgba(209,0,0,0.65);
 	--bigtrees-grey: #EDEDED;
 }
 
@@ -75,7 +77,7 @@ body{
 }
 
 .header-image{
-	background-image: image-url("TreeFeatureLargeLowSat.png");
+	background-image: image-url("MapleTreeGoldLowSat.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -112,10 +114,13 @@ body{
 	font-weight: bold;
 }
 
-.li-border-bottom{
+#services-list > li{
 	border-style: solid;
 	border-color: var(--main-color);
 	border-width: 0 0 1px 0;
+	padding: 0;
+	padding: 10px;
+	font-weight: bold;
 }
 
 #feature-panel{
@@ -222,10 +227,18 @@ body{
 
 .green-header{
 	background: var(--main-color);
+
+}
+
+.main-header{
+	background: white;
+	border-style: solid;
+	border-width: 0 0 6px 0;
+	border-color: var(--main-color);
 }
 
 #footer-container{
-	background-color: #184a00;
+	background-color: var(--main-color);
 	border-width: 8px 0 0 0;
 	border-style: solid;
 	border-color: black;
@@ -253,14 +266,7 @@ body{
 	width: 50%;
 	margin: 0;
 	display: inline-block;
-}
-
-#contact-info{
-	font-size: 15pt;
-	display: block;
-	float: right;
-	color: white;
-	margin: 30px 0 0 0;
+	margin: auto 0 0 0;
 }
 
 #nav-bar-row{
@@ -341,7 +347,6 @@ body{
 
 #about-us-image{
 	width: 100%;
-
 }
 
 #about-us-content{
@@ -382,10 +387,7 @@ body{
 	margin-bottom: 0;
 }
 
-#services-list > li{
-	padding: 10px;
-	font-weight: bold;
-}
+
 
 //CONTACT
 
@@ -435,4 +437,287 @@ body{
 	width: 60%;
 	margin: 150px auto;
 	text-align: center;
+}
+
+#header-title{
+	width: 35%;
+}
+
+#logo-image{
+	//width: 200px;
+	width: 100%;
+}
+
+
+// MEDIA SIZES
+
+@media (min-width:200px) and(max-width: 480px) { 
+	/* smartphones, iPhone, portrait 480x320 phones */ 
+	
+	#header-title{
+		width: 35%;
+	}
+	
+	#logo-image{
+		width: 200px;
+		//width: 100%;
+	}
+
+	#feature-panel{
+		height: 220px;
+	}
+
+	#feature-box{
+		font-size: 4vw;
+		padding: 30px;
+		width: 85%;
+	}
+
+	#feature-inner-box{
+		padding: 20px 10px;
+	}
+
+	.estimate-link{
+		font-size: 7vw;	
+	}
+	
+	
+	#nav-bar-container{
+		height: 40px;
+		width: 100%;
+	}
+
+	.nav > li > a{
+		padding: 10px 10px;
+		font-size: 3vw;
+	}
+	
+	#contact-methods{
+		width: 100%;
+		margin: 20px auto;
+		display:inline-block;
+		justify-content:none;
+	}
+
+	#contact-box{
+		width: 95%;
+		margin: 10px auto;
+		background-color: var(--main-color);
+		color: white;
+		white-space:nowrap;
+		padding: 20px 25px;
+	}
+
+	#contact-text{
+		text-align: center;
+		font-size: 4.5vw;
+		line-height: 2em;
+		padding: 10px 15px;
+		
+		border-style: solid;
+		border-color: white;
+		border-width: 2px;
+	}
+
+	#contact-description{
+		font-size: 5vw;
+		padding: 50px 0;
+	}
+	
+	
+	#about-us-text{
+		float: none;
+		font-size: 4vw;
+		width: 100%;
+		padding: 10px;
+	}
+
+	#about-us-image-container{
+		width: 45%;
+		float: left;
+		margin: 10px;
+	}
+
+	#about-us-image{
+		width: 100%;
+		display: inline-block;
+	}
+	
+	#services-list{
+		font-size: 3vw;
+		padding: 0;
+	}
+	#services-list > li {
+		min-height: 65px;
+		padding: 5px;
+	}
+
+
+}
+/* 320 END */
+
+
+@media (min-width:481px) and(max-width: 640px) { 
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+
+	#feature-panel{
+		height: 280px;
+	}
+
+	#feature-box{
+		font-size: 3vw;
+		padding: 30px;
+		width: 70%;
+	}
+
+	#feature-inner-box{
+		padding: 20px 10px;
+	}
+
+	.estimate-link{
+		font-size: 5.5vw;	
+	}
+	
+	#nav-bar-container{
+		height: 60px;
+		width: 100%;
+	}
+
+	.nav > li > a{
+		padding: 20px 20px;
+		font-size: 3vw;
+	}
+	
+	#about-us-text{
+		float: none;
+		font-size: 3vw;
+		width: 100%;
+		padding: 10px;
+	}
+
+	#about-us-image-container{
+		width: 46%;
+		float: left;
+		margin: 10px;
+	}
+
+	#about-us-image{
+		width: 100%;
+		display: inline-block;
+	}
+	
+	#services-list{
+		font-size: 2.5vw;
+		padding: 0;
+	}
+	#services-list > li {
+		min-height: 65px;
+		padding: 5px;
+	}
+	
+	#contact-methods{
+		width: 100%;
+		margin: 20px auto 10px auto;
+		display:inline-block;
+		justify-content:none;
+	}
+
+	#contact-box{
+		width: 75%;
+		margin: 10px auto;
+		background-color: var(--main-color);
+		color: white;
+		white-space:nowrap;
+		padding: 20px 25px;
+	}
+
+	#contact-text{
+		text-align: center;
+		font-size: 3vw;
+		line-height: 2em;
+		padding: 10px 15px;
+		
+		border-style: solid;
+		border-color: white;
+		border-width: 2px;
+	}
+
+	#contact-description{
+		font-size: 3vw;
+		padding: 50px 0;
+	}
+
+}
+@media (min-width:641px) and (max-width:920px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+	#feature-panel{
+		height: 340px;
+	}
+
+	#feature-box{
+		font-size: 2.5vw;
+		padding: 30px;
+		width: 70%;
+	}
+
+	#feature-inner-box{
+		padding: 20px 10px;
+	}
+
+	.estimate-link{
+		font-size: 5vw;	
+	}
+	
+	#nav-bar-container{
+		height: 60px;
+		width: 100%;
+	}
+
+	.nav > li > a{
+		padding: 20px 20px;
+		font-size: 3vw;
+	}
+	
+	#contact-methods{
+		width: 100%;
+		margin: 20px auto 10px auto;
+		display:inline-block;
+		justify-content:none;
+	}
+
+	#contact-box{
+		width: 75%;
+		margin: 10px auto;
+		background-color: var(--main-color);
+		color: white;
+		white-space:nowrap;
+		padding: 20px 25px;
+	}
+
+	#contact-text{
+		text-align: center;
+		font-size: 3vw;
+		line-height: 2em;
+		padding: 10px 15px;
+		
+		border-style: solid;
+		border-color: white;
+		border-width: 2px;
+	}
+
+	#contact-description{
+		font-size: 3vw;
+		padding: 50px 0;
+	}
+
+}
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1200px) { /* hi-res laptops and desktops */ 
+	.col-lg-6 {
+		width: 960px !important;
+	}
+	
+	.col-lg-offset-3{
+		margin-left : calc((100% - 960px)/2) !important;
+	}
 }

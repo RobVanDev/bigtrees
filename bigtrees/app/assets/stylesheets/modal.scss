@@ -1,10 +1,10 @@
 .modal-header{
 	color: white;
-	background: linear-gradient(#005710, #01380B);
+	background: var(--main-color);
 }
 
 .btn-modal-close{
-	background-color: #005710;
+	background-color: var(--main-color);
 	color: white;
 	margin: 0 auto;
 }
