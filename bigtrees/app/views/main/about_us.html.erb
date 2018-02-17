@@ -1,11 +1,20 @@
-<div id = "about-page-container">
+<div class = "row header-image sub-page-header">
+	<div class = "col-md-6 col-md-offset-3 sub-header-column">
+		<div class = "sub-page-header-title">
+			<div class = "sub-page-header-text">
+				About Us
+			</div>
+		</div>
+	</div>
+</div>
 
-
-
-
-<div id = 'about-us' class = "clearfix">
-	<div id = 'about-us-header'>About Us</div>
-	<div id = "about-us-content" class = "clearfix">
+<div class = "row white-row">
+	<div id = 'about-us' class = "col-md-6 col-md-offset-3">
+		<div id = 'about-us-image-container'>
+			<%= image_tag 'WorkCrew.JPG', :id => 'about-us-image' %>
+		</div>
+		
+		
 		<div id = 'about-us-text'>
 		We are a team of arborists, forestry technicians, utility line trimmers, and pesticide applicators with a common passion for tree care, chainsaws, and spending our days in the great outdoors. We are dedicated to providing tree removal, trimming and lot clearing services to Southern Ontario, including Toronto and the GTA, Kingston, Ottawa and more.
 		<br /><br />
@@ -14,43 +23,32 @@
 		ThatsABigTree.ca is a locally owned business with roots<br />in Southern Ontario. 
 		<br />
 		</div>
-		<div id = 'about-us-image-container'>
-			<%= image_tag 'BigTreeRes.jpg', :id => 'about-us-image' %>
-		</div>
 	</div>
 </div>
 
-<div id = 'services-container' class = 'clearfix'>
-	<div id = 'services-header'>Our Services</div>
-		<div id = 'services-image-container'>
-			<%= image_tag "WorkCrew.JPG", :id => 'services-image' %>
-		</div>
-		<div id = 'services-table-container'>
-			<table id = 'services-table'>
-				<tr>
-					<td>Tree Removal</td>
-					<td>Tree and Bush Trimming</td>
-					
-				</tr>
-				<tr>
-					<td>Stump Removal</td>
-					<td>Chipping and Cleanup</td>
-				</tr>
-				<tr>
-					<td>Storm Damage</td>
-					<td>Cabling and Bracing</td>
-					
-				</tr>
-				<tr>
-					<td>Lot Clearing</td>
-					<td>Tree Injections</td>
-				</tr>
-				<tr>
-					<td colspan = 2>Right of Way Management</td>
-				</tr>
+<div class = "row grey-row">
+	<div class = "col-md-6 col-md-offset-3">
+		<div id = "services-box" class = "shadow-box">
+			<div id = "services-title">
+				Our Services
+			</div>
+			<div id = "services-description">
+				We offer a full range of tree care services to ensure your needs are met.
+			</div>
+			<ul id = "services-list">
+				<li class = "li-border-bottom">Tree Removal</li>
+				<li class = "li-border-bottom">Tree and Bush Trimming</li>
+				<li>Lot Clearing</li>
 				
-			</table>
+				<li class = "li-border-bottom">Storm Damage</li>
+				<li class = "li-border-bottom">Chipping and Cleanup</li>
+				<li>Cabling and Bracing</li>
+				
+				<li class = "li-border-bottom">Stump Removal</li>
+				<li class = "li-border-bottom">Right of Way Management</li>
+				<li>Tree Injections</li>
+			</ul>
 		</div>
-
 	</div>
 </div>
+
