@@ -2,18 +2,20 @@ Rails.application.routes.draw do
 
 	default_url_options :host => "thatsabigtree.ca"
 
-  root 'main#home'
-  
+  root 'main#show', page: "home"
+
+	get "/main/:page" => "main#show", as: :pages
+
   match '/estimate/display_estimate' => 'estimate#display_estimate', :as => :display, via: :all
-  
+
   get ':controller/:action'
-  
+
   put ':controller/:action'
-  
+
   post ':controller/:action'
-  
+
   match '*path' => 'main#not_found', via: :all
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

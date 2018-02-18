@@ -7,9 +7,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
 
   <%= csrf_meta_tags %>
-  
+
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -18,8 +18,8 @@
 				$(this).removeData('bs.modal');
 			});
 		</script>
-			
-		
+
+
 			<div class = "container-fluid">
 				<div class = "row main-header" id = "header-row">
 					<div id = "header-container" class = "col-lg-6 col-lg-offset-3" >
@@ -30,28 +30,31 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class = "row", id = "nav-bar-row">
 
-					
+
 					<div id = "nav-bar-container" class = "col-lg-6 col-lg-offset-3">
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<ul class="nav navbar-center">
-							<li class = "menu-item"><%= link_to "Home", url_for(:controller => 'main', :action => 'home') %></li>
-							<li class = "menu-item"><%= link_to "About Us", url_for(controller: 'main', action: 'about_us') %></li>
-							<li class = "menu-item"><%= link_to "Free Estimate", controller: "estimate", action: "new" %></li>
-							<li class = "menu-item"><%= link_to "Contact Us", controller: "main", action: "contact_us" %></li>
+							<li class = "menu-item"><%= link_to "Home", pages_path(page: "home") %></li>
+							<li class = "menu-item"><%= link_to "Our Promise", pages_path(page: "promise") %></li>
+              <li class = "menu-item"><%= link_to "Services", pages_path(page: "services") %></li>
+              <li class = "menu-item"><%= link_to "Commercial", pages_path(page: "commercial") %></li>
+							<li class = "menu-item"><%= link_to "Estimates", controller: "estimate", action: "new" %></li>
+              <li class = "menu-item"><%= link_to "Careers", pages_path(page: "careers") %></li>
+							<li class = "menu-item"><%= link_to "Contact Us", pages_path(page: "contact_us") %></li>
 						</ul>
 					</div>
-					
+
 				</div>
-				
+
 				<div class="row">
 					<div id = "main-box">
 						<%= yield %>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class = ".col-md-3"></div>
 					<div id = "footer-container" class = ".col-md-6">
@@ -61,7 +64,7 @@
 					<div class = ".col-md-3"></div>
 				</div>
 			</div>
-			
+
 
 		<div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal" aria-hidden="true">
 			<div class="modal-dialog">
@@ -70,7 +73,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 
 </body>
 </html>

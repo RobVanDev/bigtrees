@@ -1,0 +1,46 @@
+#promise{
+  margin: 30px 0px;
+}
+
+.promise-block{
+  margin: 40px 0px;
+  width: 90%;
+}
+
+.promise-title{
+  border-width: 0 0 2px 0;
+  border-color: var(--main-color);
+  border-style: solid;
+  width: 50%;
+}
+
+.promise-title-text{
+  color: var(--main-color);
+  font-size: 24pt;
+  font-weight: 600;
+}
+
+.promise-content{
+  font-size: 16pt;
+  margin: 20px 0 0 20px;
+}
+
+@media (min-width:481px) and(max-width: 640px) {
+  .promise-title{
+    width: 100%;
+  }
+
+  .promise-title-text{
+    font-size: 20pt;
+  }
+}
+
+@media (min-width:641px) and (max-width:920px) {
+  .promise-title{
+    width: 100%;
+  }
+
+  .promise-title-text{
+    font-size: 20pt;
+  }
+}
